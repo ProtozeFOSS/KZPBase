@@ -2,6 +2,9 @@ import QtQuick 2.15
 
 Item { // NOTE we do not want our base item to be a window!
     id:rootItem // Items have no visible area, this section will appear black on the display
+
+    // Visual items are what is actually seen inside the Kraken display
+    // https://doc.qt.io/qt-5/qtquick-usecase-visual.html
     Rectangle{
         width:240
         height:width // bound to width, if width changes, so does height and radius
@@ -22,6 +25,7 @@ Item { // NOTE we do not want our base item to be a window!
                 width:80
                 height:80
                 radius:80
+                opacity:.5 // blend this blue with the color behind it (white) 50%
                 color:"#0000FF" // (blue) can use HTML HEX RGB notation
             }
         }
