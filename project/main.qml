@@ -14,14 +14,14 @@ Item { // NOTE we do not want our base item to be a window!
 
         Rectangle{ // inner white circle
             id: innerCircle
-            anchors.centerIn: parent // now refers to rootItem
+            anchors.centerIn: parent // parent now refers to the red circle
             width:160
             height:160
             radius:160
             color:"white"
             Rectangle{
                 id: coreCircle
-                anchors.centerIn: parent // now refers to rootItem
+                anchors.centerIn: parent // parent now refers to the (white) innerCircle (you could have used this id for the same result)
                 width:80
                 height:80
                 radius:80
